@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+
+    android:background="@drawable/tlo"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context="com.example.baste.ippradio.MainActivity"
+    tools:deviceIds="wear">
+
+
+    <Button
+        android:id="@+id/koniec"
+        android:layout_width="@dimen/diag_button_bottom_padding_round"
+        android:layout_height="@dimen/diag_button_bottom_padding_round"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/ic_lock_power_off" />
+
+    <Button
+        android:id="@+id/dzwiek"
+        android:layout_width="@dimen/nav_drawer_single_page_icon_size"
+        android:layout_height="@dimen/diag_button_bottom_padding_round"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/audio" />
+
+    <SeekBar
+        android:id="@+id/sbVolumeBooster"
+        android:layout_width="@dimen/diag_shade_height_round"
+        android:layout_height="@dimen/diag_button_bottom_padding_round"
+        android:layout_alignTop="@+id/dzwiek"
+        android:layout_toEndOf="@+id/button4"
+        android:layout_toStartOf="@+id/dzwiek" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="@dimen/diag_button_bottom_padding_round"
+        android:layout_height="@dimen/diag_button_bottom_padding_round"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/sbVolumeBooster"
+        android:background="@drawable/ic_more_vert_24dp_wht" />
+
+    <TextView
+        android:id="@+id/etykieta_g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClock"
+        android:layout_centerHorizontal="true"
+        android:text="Głośność"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sbVolumeBooster"
+        android:layout_toEndOf="@+id/button4"
+        android:layout_toStartOf="@+id/etykieta_g"
+        android:text="| 0%"
+        android:textAlignment="textEnd"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dzwiek"
+        android:layout_toEndOf="@+id/etykieta_g"
+        android:text="100% |"
+        android:textAlignment="textStart"
+        android:textColor="@color/green" />
+
+    <Button
+        android:id="@+id/startstopbtn"
+        android:layout_width="@dimen/confirmation_overlay_image_size"
+        android:layout_height="@dimen/confirmation_overlay_image_size"
+        android:layout_alignBaseline="@+id/play2"
+        android:layout_alignBottom="@+id/play2"
+        android:layout_marginLeft="-5dp"
+        android:layout_toEndOf="@+id/t1"
+        android:background="@drawable/play3"
+        android:text="START" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etykieta_g"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-17dp"
+        android:text="informacje"
+        android:textAlignment="center"
+        android:textColor="@color/dark_red"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="@dimen/action_drawer_item_icon_size"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/koniec"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/play2"
+        android:layout_width="@dimen/confirmation_overlay_image_size"
+        android:layout_height="@dimen/confirmation_overlay_image_size"
+        android:layout_alignTop="@+id/t1"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-5dp"
+        android:layout_toEndOf="@+id/t1"
+        android:background="@drawable/accept_deny_dialog_positive_bg"
+        android:text="Połącz" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="@dimen/close_button_diameter"
+        android:layout_height="@dimen/close_button_diameter"
+        android:layout_above="@+id/powiad"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginBottom="-7dp"
+        android:layout_marginRight="-9dp"
+        android:max="100"
+        android:progress="10"
+        android:progressTint="@color/dark_red" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar2"
+        android:layout_centerHorizontal="true"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/powiad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/koniec"
+        android:layout_alignStart="@+id/info"
+        android:text="TextView"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
+
